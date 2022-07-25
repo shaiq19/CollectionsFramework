@@ -20,8 +20,14 @@ public class  LearnCollectionsClass {
 
         System.out.println(list);
 
-        Collections.sort(list, (o1, o2) -> o1.name.compareTo(o2.name));
+        Collections.sort(list, (o1, o2) -> o1.name.compareTo(o2.name));//lemda function from java8//in normal
 
+        /*Collections.sort(list, new Comparator<Student>(){
+        @Override
+        punlic int compare(Student o1, Student o2){
+         return o1.name.compareTo(o2.name);
+        }
+        });*/
         System.out.println(list);
 
         
