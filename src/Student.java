@@ -16,7 +16,7 @@ public class Student implements Comparable<Student> {
     }
 
     @Override
-    public boolean equals(Object o) {////s1.equals(s2)); same things i do here
+    public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Student student = (Student) o;
@@ -32,5 +32,4 @@ public class Student implements Comparable<Student> {
     public int compareTo(Student that) {
         return this.rollNo - that.rollNo;
     }
-
 }
