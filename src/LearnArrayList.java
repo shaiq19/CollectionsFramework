@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.ListIterator;
 
 public class LearnArrayList {
 
@@ -45,6 +46,7 @@ public class LearnArrayList {
         //or
 
         for (Integer element: list) {
+           // list.remove(2);//shows erroe because on runtime dynamically we do nit remove data in for loops that is why we need itrator
             System.out.println("forEach loop"+ element);
         }
 
@@ -54,8 +56,42 @@ public class LearnArrayList {
 
         Iterator<Integer> itlist = list.iterator();
 
-        while (itlist.hasNext()){
-            System.out.println("iterator" + itlist.next());
+           while (itlist.hasNext()) {
+           /*int element = itlist.next();
+           if(element == list)*/
+               /*          itlist.remove();*/
+               System.out.println("iterator" + itlist.next());
+           }
+
+
+            System.out.println("--------itrator 2md time---------");
+
+
+            itlist = list.iterator();// itrator move itself at the end to move the list again we have to define it again as just we define here
+
+            while (itlist.hasNext()){
+           /*int element = itlist.next();
+           if(element == list)*/
+                /*          itlist.remove();*/
+                System.out.println("iterator" + itlist.next());
+
+
+                System.out.println("-------listitrator---------");
+
+                ListIterator<Integer> listit = list.listIterator();
+
+                while (listit.hasNext()) {
+           /*int element = itlist.next();
+           if(element == list)*/
+                    /*          itlist.remove();*/
+                    System.out.println("listIterator" + listit.next());
+                }
+
+                System.out.println("-------listitrator end to beginning---------");//move backword by using listitrator
+
+                while (listit.hasPrevious()){
+                    System.out.println("listIterator"+ listit.previous() );
+                }
         }
     }
 }
